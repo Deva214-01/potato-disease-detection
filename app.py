@@ -1,3 +1,8 @@
+import os
+
+os.environ["TF_NUM_INTRAOP_THREADS"] = "1"
+os.environ["TF_NUM_INTEROP_THREADS"] = "1"
+
 from flask import Flask, render_template, request
 import tensorflow as tf
 import numpy as np
